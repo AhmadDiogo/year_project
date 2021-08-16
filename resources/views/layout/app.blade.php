@@ -32,14 +32,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav ms-auto mb-4 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="{{ route('welcome') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('about_us') }}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resto-bar.html">Resto &amp; Bar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Swimming Pool</a></li>
-                    <li class="nav-item"><a class="nav-link" href="conf.html">Conf. Venues </a></li>
-                    <p><a href="#" class="btn btn-primary p-4 py-3">Login <span
+                    <li class="nav-item"><a class="nav-link active" href="{{ route('welcome') }}">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('about_us') }}">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('rooms.index') }}">ROOMS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('restaurant') }}">RESTO &amp; BAR</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('swimming_pool') }}">SWIMMING POOL</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('conf_venues') }}">CONF. VENUES </a></li>
+                    <p><a href="#" class="btn btn-primary p-4 py-3">BOOK <span
                                 class="ion-ios-arrow-round-forward"></span></a> </p>
                 </ul>
 
@@ -53,6 +54,80 @@
 
 
 
+    <footer class="ftco-footer">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 logo d-flex">
+                            <a class="navbar-brand align-items-center" href="index.html">
+                                <span class="">Lake Breeze <small>
+                                        <p style="text-align:center;">Hotel</p>
+                                    </small></span>
+                            </a>
+                        </h2>
+                        <p>Your Comfort is our priority!
+                        </p>
+                        <ul class="ftco-footer-social list-unstyled mt-2">
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Services</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Quick Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Home</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Rooms</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Resto &amp; Bar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map marker"></span><span class="text">198 West 21th Street,
+                                        Diani Beach Road Diani Beach, Kenya</span></li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+254 709
+                                            538880</span></a></li>
+                                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span
+                                            class="text"><span class="__cf_email__"
+                                                data-cfemail="533a3d353c132a3c2621373c3e323a3d7d303c3e">[email&#160;protected]</span></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0 py-5 bg-darken">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">Copyright
+                            &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>2021 Lake Breeze Hotel.All Rights Reserved. <i
+                                class="fa fa-heart color-danger" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>

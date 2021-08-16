@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\RoomsController;
 use Illuminate\Support\Facades\Route;
+use App\Models\HotelService;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +20,53 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/contact', function () {
-    // return view('contacts.contact');
+
     return view('contact');
 })->name('contact');
 
 Route::get('/about_us', function () {
-    // return view('contacts.contact');
+    
     return view('about');
 })->name('about_us');
+
+
+// Route::get('/rooms', function () {
+//     return view('rooms');
+// })->name('rooms');
+
+
+// Route::get('/single_room', function () {
+
+//     $hotel_services = HotelService::all();
+
+//     // return $hotel_services;
+
+//     return view('single_room')->with('hotel_services', $hotel_services);
+// })->name('single_room');
+
+
+
+Route::resource('/rooms', RoomsController::class);
+
+Route::get('/restaurant', function () {
+
+    return view('res&Bar');
+})->name('restaurant');
+
+
+Route::get('/swimming_pool', function () {
+
+    return view('swimming_pool');
+})->name('swimming_pool');
+
+
+Route::get('/conferences', function () {
+
+    return view('conf_venues');
+})->name('conf_venues');
+
+
+
+
+
+// Controller 

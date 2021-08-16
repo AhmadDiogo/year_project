@@ -1,6 +1,5 @@
 @extends('layout.app')
 
-
 @section('content')
     <section class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
         <div class="overlay"></div>
@@ -13,6 +12,8 @@
                                 class="ion-ios-arrow-round-forward"></span></a> </p>
                 </div>
             </div>
+
+
         </div>
     </section>
 
