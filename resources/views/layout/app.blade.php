@@ -10,16 +10,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&amp;family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
     <link rel="stylesheet"
-        href="css/A.animate.css%2bflaticon.css%2btiny-slider.css%2bglightbox.min.css%2baos.css%2bdatepicker.min.css%2bstyle.css%2cMcc.nCQXu6LVyk.css.pagespeed.cf.rg4CHwA3tS.css" />
+        href="{{ asset('../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('../../../cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/A.animate.css%2bflaticon.css%2btiny-slider.css%2bglightbox.min.css%2baos.css%2bdatepicker.min.css%2bstyle.css%2cMcc.nCQXu6LVyk.css.pagespeed.cf.rg4CHwA3tS.css') }}" />
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg  ftco-navbar-light">
         <div class="container-xl">
-            <a class="navbar-brand align-items-center" href="index.html">
+            <a class="navbar-brand align-items-center" href="#">
                 <span class="">Lake Breeze <small>
                         <p style="text-align:center;">Hotel</p>
                     </small></span>
@@ -49,9 +51,6 @@
     </nav>
 
     @yield('content')
-
-
-
 
 
     <footer class="ftco-footer">
@@ -129,13 +128,13 @@
         </div>
     </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/glightbox.min.js%2baos.js.pagespeed.jc.gNemz1ctce.js"></script>___scripts_3___
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/tiny-slider.js') }}"></script>
+    <script src="{{ asset('js/glightbox.min.js%2baos.js.pagespeed.jc.gNemz1ctce.js') }}"></script>___scripts_3___
     <script>
         eval(mod_pagespeed_4HfeNGdLlq);
     </script>
-    <script src="js/datepicker.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.XiV_3kbmz-.js"></script>___scripts_6___
+    <script src="{{ asset('js/datepicker.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.XiV_3kbmz-.js') }}"></script>___scripts_6___
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false">
     </script>
     <script>
@@ -156,7 +155,7 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
-    <script defer src="../../../static.cloudflareinsights.com/beacon.min.js"
+    <script defer src="{{ asset('../../../static.cloudflareinsights.com/beacon.min.js') }}"
         data-cf-beacon='{"rayId":"65bbd15fb8a74f87","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'>
     </script>
 </body>

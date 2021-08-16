@@ -109,8 +109,23 @@
             <div class="row justify-content-center">
 
 
-                @if (count($rooms) > 100)
-
+                @if (count($rooms) > 0)
+                    @foreach ($rooms as $room)
+                        <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="flip-left" data-aos-delay="300"
+                            data-aos-duration="1000">
+                            <div class="room-wrap d-md-flex flex-md-column-reverse">
+                                <a href="{{ route('rooms.show', $room->id) }}" class="img img-room"
+                                    style="background-image: url(images/room-6.jpg);">
+                                </a>
+                                <div class="text p-5 text-center">
+                                    <h3><a href="{{ route('rooms.show', $room->id) }}">{{ $room->room_name }}</a></h3>
+                                    <p>{{ $room->room_description }}</p>
+                                    <p class="mb-0 mt-2"><span class="me-3 price">R {{ $room->room_price }} <small>/
+                                                night</small></span><a href="#" class="btn-custom">Book Now</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 @else
                     <p>No rooms available yet</p>
                 @endif

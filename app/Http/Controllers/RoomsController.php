@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Room;
+use App\Models\HotelService;
 
 
 class RoomsController extends Controller
@@ -30,13 +31,17 @@ class RoomsController extends Controller
     public function show($id)
     {
         //
+        $room = Room::findOrFail($id);
+        
+        $any_2_rooms = Room::inRandomOrder()->limit(2)->get();
+
+        // return $any_3_rooms;
 
         $hotel_services = HotelService::all();
         // return $hotel_services;
-        return view('single_room')->with('hotel_services', $hotel_services);
+        return view('single_room')->with('room', $room)->with('any_2_rooms', $any_2_rooms)
+        ->with('hotel_services', $hotel_services);
     }
-
-    
 
     
 }

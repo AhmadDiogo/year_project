@@ -1,7 +1,8 @@
 @extends('layout.app')
 
 @section('content')
-    <section class="hero-wrap hero-wrap-2" style="background-image:url(images/xbg_3.jpg.pagespeed.ic.0AiuSxYrJD.jpg)">
+    <section class="hero-wrap hero-wrap-2"
+        style="background-image:url({{ asset('images/xbg_3.jpg.pagespeed.ic.0AiuSxYrJD.jpg') }})">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -23,32 +24,30 @@
                     <div class="carousel-room">
                         <div class="item">
                             <div class="room-detail img"
-                                style="background-image:url(images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg)">
+                                style="background-image:url({{ asset('images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg') }})">
                             </div>
                         </div>
                         <div class="item">
                             <div class="room-detail img"
-                                style="background-image:url(images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg)">
+                                style="background-image:url({{ asset('images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg') }})">
                             </div>
                         </div>
                         <div class="item">
                             <div class="room-detail img"
-                                style="background-image:url(images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg)">
+                                style="background-image:url({{ asset('images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg') }})">
                             </div>
                         </div>
                         <div class="item">
                             <div class="room-detail img"
-                                style="background-image:url(images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg)">
+                                style="background-image:url({{ asset('images/xroom-1.jpg.pagespeed.ic.8hFWmffUTt.jpg') }})">
                             </div>
                         </div>
                     </div>
-                    <h2>Luxury Room</h2>
-                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of
-                        her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the
-                        Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                    <h2>{{ $room->room_name }}</h2>
+                    <p>{{ $room->room_description }}</p>
                     <div class="d-md-flex mt-5 mb-5">
                         <ul class="list">
-                            <li><span>Max:</span> 3 Persons</li>
+                            <li><span>Max:</span> {{ $room->number_guests }} Persons</li>
                             <li><span>Size:</span> 45 m2</li>
                         </ul>
                         <ul class="list ms-md-5">
@@ -111,36 +110,27 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 d-flex align-items-stretch" data-aos="flip-left" data-aos-delay="200"
-                            data-aos-duration="1000">
-                            <div class="room-wrap">
-                                <a href="#" class="img img-room"
-                                    style="background-image:url(images/xroom-2.jpg.pagespeed.ic.RWk6y2cGAc.jpg)">
-                                </a>
-                                <div class="text p-5 text-center">
-                                    <h3><a href="#">Family Room</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                        Consonantia, there live the blind texts.</p>
-                                    <p class="mb-0 mt-2"><span class="me-3 price">$450 <small>/ night</small></span><a
-                                            href="#" class="btn-custom">Book Now</a></p>
+
+                        @if (count($any_2_rooms) > 0)
+                            @foreach ($any_2_rooms as $room)
+                                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">
+                                    <div class="room-wrap d-md-flex flex-md-column-reverse">
+                                        <a href="#" class="img img-room"
+                                            style="background-image:url({{ asset('images/xroom-3.jpg.pagespeed.ic.1_fVN4GKrT.jpg') }})">
+                                        </a>
+                                        <div class="text p-5 text-center">
+                                            <h3><a href="#">{{ $room->room_name }}</a></h3>
+                                            <p>{{ $room->room_description }}</p>
+                                            <p class="mb-0 mt-2"><span class="me-3 price">R {{ $room->room_price }}
+                                                    <small>/
+                                                        night</small></span><a href="#" class="btn-custom">Book Now</a></p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex align-items-stretch" data-aos="flip-left" data-aos-delay="300"
-                            data-aos-duration="1000">
-                            <div class="room-wrap d-md-flex flex-md-column-reverse">
-                                <a href="#" class="img img-room"
-                                    style="background-image:url(images/xroom-3.jpg.pagespeed.ic.1_fVN4GKrT.jpg)">
-                                </a>
-                                <div class="text p-5 text-center">
-                                    <h3><a href="#">Deluxe Room</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                        Consonantia, there live the blind texts.</p>
-                                    <p class="mb-0 mt-2"><span class="me-3 price">$450 <small>/ night</small></span><a
-                                            href="#" class="btn-custom">Book Now</a></p>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
+                        @else
+
+                        @endif
                     </div>
                 </div>
                 <div class="col-lg-4 sidebar ps-md-4">
