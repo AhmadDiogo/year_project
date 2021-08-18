@@ -20,7 +20,7 @@
     <section class="ftco-section ftco-no-pb ftco-no-pt ftco-booking">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10 center">
                     <form action="#" class="booking-form">
                         <div class="row g-0">
                             <div class="col-md-6 col-lg form-wrap d-flex py-3 py-lg-5 px-4">
@@ -28,7 +28,8 @@
                                     <label for="#">Check-In</label>
                                     <div class="form-field">
                                         <div class="icon"><span class="fa fa-calendar"></span></div>
-                                        <input type="text" class="form-control arrival_date" placeholder="Check-In Date">
+                                        <input type="datetime-local" class="form-control arrival_date"
+                                            placeholder="Check-In Date">
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +38,8 @@
                                     <label for="#">Check-Out</label>
                                     <div class="form-field">
                                         <div class="icon"><span class="fa fa-calendar"></span></div>
-                                        <input type="text" class="form-control departure_date" placeholder="Check-Out Date">
+                                        <input type="datetime-local" class="form-control departure_date"
+                                            placeholder="Check-Out Date">
                                     </div>
                                 </div>
                             </div>

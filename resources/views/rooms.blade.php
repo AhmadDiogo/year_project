@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    {{-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');">
         <div class="overlay"></div>
@@ -121,7 +121,8 @@
                                     <h3><a href="{{ route('rooms.show', $room->id) }}">{{ $room->room_name }}</a></h3>
                                     <p>{{ $room->room_description }}</p>
                                     <p class="mb-0 mt-2"><span class="me-3 price">R {{ $room->room_price }} <small>/
-                                                night</small></span><a href="#" class="btn-custom">Book Now</a></p>
+                                                night</small></span><a href="{{ route('bookings.show', $room->id) }}"
+                                            class="btn-custom">Book Now</a></p>
                                 </div>
                             </div>
                         </div>

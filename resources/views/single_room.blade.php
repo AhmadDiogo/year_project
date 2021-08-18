@@ -55,6 +55,10 @@
                             <li><span>Bed:</span> 1</li>
                         </ul>
                     </div>
+                    <p><a href="{{ route('bookings.show', $room->id) }}" class="btn btn-primary py-3 px-4">Book Your Room
+                            Now</a>
+                    </p>
+
                     <div class="properties-single mb-5 mt-4">
                         <h4 class="mb-4">Review &amp; Ratings</h4>
                         <div class="row">

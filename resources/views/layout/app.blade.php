@@ -93,6 +93,9 @@
                             <li><a href="#"><span class="fa fa-chevron-right me-2"></span>About</a></li>
                             <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Rooms</a></li>
                             <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Resto &amp; Bar</a></li>
+
+                            <li><a href="/admin"><span class="fa fa-chevron-right me-2"></span>Admin Pannel</a></li>
+
                         </ul>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\RoomsController;
+use App\Http\Controllers\BookingsController;
+
 use Illuminate\Support\Facades\Route;
 use App\Models\HotelService;
 
@@ -46,27 +48,30 @@ Route::get('/about_us', function () {
 
 
 
-Route::resource('/rooms', RoomsController::class);
 
 Route::get('/restaurant', function () {
-
+    
     return view('res&Bar');
 })->name('restaurant');
 
 
 Route::get('/swimming_pool', function () {
-
+    
     return view('swimming_pool');
 })->name('swimming_pool');
 
 
 Route::get('/conferences', function () {
-
+    
     return view('conf_venues');
 })->name('conf_venues');
 
-
-
+Route::resource('/rooms', RoomsController::class);
+Route::resource('/bookings', BookingsController::class);
 
 
 // Controller 
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
