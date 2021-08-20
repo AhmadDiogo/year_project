@@ -20,7 +20,7 @@
     <section class="ftco-section ftco-no-pb ftco-no-pt ftco-booking">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 center">
+                <div class="col-md-10 ">
                     <form action="#" class="booking-form">
                         <div class="row g-0">
                             <div class="col-md-6 col-lg form-wrap d-flex py-3 py-lg-5 px-4">
@@ -85,7 +85,6 @@
                                         <a href="#" type="submit"
                                             class="d-flex justify-content-center align-items-center align-self-stretch form-control btn btn-primary py-lg-4 py-xl-0"><span>Check
                                                 Availability</span></a>
-
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +94,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="ftco-section ftco-about-section">
         <div class="container-xl">
@@ -139,7 +137,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="ftco-section">
         <div class="container-xl">
